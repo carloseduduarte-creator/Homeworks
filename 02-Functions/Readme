@@ -1,0 +1,17 @@
+# Functions
+
+## Diferencia entre funciones normales y Arrow Functions
+
+La función normal utiliza la palabra `function`.
+
+La Arrow Function utiliza `=>` y tiene una forma más corta de escribir la función.
+
+En este ejercicio se realizaron las dos formas para comprobar si un número es par o impar.
+
+## Resultado
+
+FUNCIONES
+4 es par
+7 es impar
+10 es par
+5 es impar
