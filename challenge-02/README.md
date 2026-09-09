@@ -1,6 +1,6 @@
 # Challenge 02 - Contactos
 
-Aplicación sencilla hecha en React para manejar una lista de contactos.
+Aplicación hecha en React para manejar una lista de contactos.
 
 Permite:
 - Ver contactos iniciales.
