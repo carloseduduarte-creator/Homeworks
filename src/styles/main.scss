@@ -1,0 +1,113 @@
+
+$primary: #6256e8;
+$primary-dark: #4b40c9;
+$background: #f5f6fc;
+$text-color: #25263a;
+$muted-color: #777b91;
+$border-color: #e6e8f0;
+$success: #1e9b68;
+$danger: #dc3545;
+
+body {
+  margin: 0;
+  background: $background;
+  color: $text-color;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+h1,
+h2 {
+  color: $text-color;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(35, 38, 70, 0.05) !important;
+}
+
+.form-control {
+  min-height: 44px;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: 10px 14px;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.12);
+  }
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background: $primary-dark;
+    border-color: $primary-dark;
+  }
+}
+
+.list-group-item {
+  padding: 16px;
+  border-color: $border-color;
+  background: #fff;
+
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.form-check-input {
+  cursor: pointer;
+
+  &:checked {
+    background-color: $success;
+    border-color: $success;
+  }
+}
+
+.alert {
+  border-radius: 10px;
+}
+
+.text-muted {
+  color: $muted-color !important;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .card {
+    padding: 20px !important;
+  }
+
+  .btn {
+    padding: 9px 12px;
+  }
+}
