@@ -1,15 +1,17 @@
 
 class TreeNode {
-    constructor(title, link, component) {
-        this.title = title;
-        this.link = link;
-        this.component = component;
-        this.children = [];
-    }
+  constructor(name, type, email) {
+    this.name = name;
+    this.type = type;
+    this.email = email;
+    this.children = [];
+  }
 
-    addChild(node) {
-        this.children.push(node);
+  addChild(node) {
+    if (this.type === "folder") {
+      this.children.push(node);
     }
+  }
 }
 
 export default TreeNode;

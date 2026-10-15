@@ -1,31 +1,47 @@
 
-import TreeNode from './TreeNode.js';
+import TreeNode from "./TreeNode";
 
 class NaryTree {
-    constructor() {
-        this.root = null;
+  constructor(name, email) {
+    this.root = new TreeNode(name, "folder", email);
+  }
+
+  addNode(parent, node) {
+    if (parent.type !== "folder") {
+      console.log("No se pueden agregar hijos a un archivo");
+      return false;
     }
 
-    setRoot(title, link, component) {
-        this.root = new TreeNode(title, link, component);
-        return this.root;
+    if (!this.findNode(this.root, parent)) {
+      console.log("La carpeta no pertenece al árbol");
+      return false;
     }
 
-    addChild(parent, title, link, component) {
-        const newNode = new TreeNode(title, link, component);
-        parent.addChild(newNode);
-        return newNode;
+    parent.addChild(node);
+    return true;
+  }
+
+  findNode(current, target) {
+    if (current === target) {
+      return true;
     }
 
-    printTree(node = this.root) {
-        if (node !== null) {
-            console.log(node.title);
-
-            node.children.forEach((child) => {
-                this.printTree(child);
-            });
-        }
+    for (let child of current.children) {
+      if (this.findNode(child, target)) {
+        return true;
+      }
     }
+
+    return false;
+  }
+
+  printTree(node = this.root) {
+    console.log(node.name);
+
+    for (let child of node.children) {
+      this.printTree(child);
+    }
+  }
 }
 
 export default NaryTree;

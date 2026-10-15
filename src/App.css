@@ -1,87 +1,82 @@
 
-* {
-    box-sizing: border-box;
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #263238;
+  margin: 0;
+  background-color: #111827;
 }
 
-.sidebar {
-    width: 270px;
-    min-height: 100vh;
-    padding: 25px 15px;
-    background-color: #202b3c;
-    color: white;
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.sidebar h2 {
-    margin: 0 0 30px;
-    padding: 0 10px;
-    font-size: 22px;
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
-.menu-list,
-.submenu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+input,
+select,
+button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  font-size: 15px;
 }
 
-.submenu {
-    padding-left: 15px;
+input,
+select {
+  background-color: #1f2937;
+  color: white;
 }
 
-.menu-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 7px;
-    background: transparent;
-    color: #e5eaf1;
-    text-align: left;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+input {
+  flex: 1;
+  min-width: 180px;
 }
 
-.menu-button:hover {
-    background-color: #34445b;
-    color: white;
+button {
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  border: none;
 }
 
-main {
-    min-width: 0;
+button:hover {
+  background-color: #1d4ed8;
 }
 
-main h1 {
-    margin-top: 0;
-    color: #202b3c;
-    font-size: 30px;
+
+.tree-node {
+  margin-left: 24px;
+  border-left: 1px solid #374151;
+  padding-left: 12px;
 }
 
-main p {
-    color: #64748b;
-    line-height: 1.6;
+.tree-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 6px;
 }
 
-@media (max-width: 600px) {
-    .sidebar {
-        width: 200px;
-        padding: 20px 10px;
-    }
+.tree-item:hover {
+  background-color: #1f2937;
+}
 
-    main {
-        padding: 20px !important;
-    }
-
-    main h1 {
-        font-size: 24px;
-    }
+.tree-icon {
+  font-size: 20px;
 }
