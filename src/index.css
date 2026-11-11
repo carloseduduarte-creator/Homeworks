@@ -1,0 +1,94 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: #1c2430;
+  background: #f4f1ea;
+  line-height: 1.4;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  display: grid;
+  gap: 16px;
+}
+
+h1, h2 { margin: 0; }
+
+h1 { font-size: 1.6rem; }
+
+h2 { font-size: 1.15rem; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e2d9cc;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.muted { margin: 0; color: #5e6874; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+label, select, input {
+  font: inherit;
+}
+
+label { display: grid; gap: 6px; font-size: 0.92rem; }
+
+input, select {
+  width: 100%;
+  border: 1px solid #cfc6b8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: white;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font: inherit;
+  background: #1f6b4a;
+  color: white;
+  cursor: pointer;
+}
+
+button.danger {
+  background: transparent;
+  color: #9d2c2c;
+  padding-inline: 8px;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #eee6db;
+  padding-top: 8px;
+}
+
+.grafo { overflow: hidden; min-height: 440px; }
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}
