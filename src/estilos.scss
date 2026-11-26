@@ -1,0 +1,116 @@
+$fondo: #121212;
+$tarjeta: #181818;
+$campo: #282828;
+$texto: #ffffff;
+$suave: #b3b3b3;
+$boton: #1db954;
+$linea: #2a2a2a;
+
+@mixin panel {
+  background: $tarjeta;
+  border-radius: 8px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: $texto;
+  background: $fondo;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: grid;
+  gap: 16px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+.card {
+  @include panel;
+}
+
+.muted {
+  margin: 0;
+  color: $suave;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.92rem;
+}
+
+input,
+select {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  color: $texto;
+  background: $campo;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font: inherit;
+  background: $boton;
+  color: #000;
+  cursor: pointer;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 1px solid $linea;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
